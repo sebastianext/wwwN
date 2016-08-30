@@ -1,0 +1,91 @@
+<ion-view view-title="" ng-class="{'fondo-comversando':(tipo=='1'),'fondo-comentario-competencia':(tipo=='2'),'fondo-puntos-venta':(tipo=='3')}">
+	
+  <ion-content  class="margin-top-60">
+ 
+<!-- ************************************************************* -->
+   	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80 letra justificado" >
+	  	<p>Selecciona si tu reporte es positivo, negativo o informativo y escríbelo en el campo comentario</p>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+<!-- ************************************************************* -->
+	<div class="row">
+      <div class="col col-33"> 
+		    <ion-list>
+			 	 <ion-radio ng-model="data.opcion" ng-value="'Positivo'" ng-click="opcionPositivo()" class="radioPositivo">
+			 	 	<img width="70" ng-if="mostrarPositivo" src="img/positivoBtn.png">
+			 	 	<img width="70" ng-if="!mostrarPositivo" src="img/positivoBtn_pressed.png">
+			 	 </ion-radio>
+			</ion-list>
+	  </div>
+	  <div class="col col-33">
+	  	  <ion-list>
+			 	 <ion-radio ng-model="data.opcion" ng-value="'Negativo'" ng-click="opcionNegativo()"  class="radioPositivo">
+			 	 	<img width="70" ng-if="mostrarNegativo" src="img/negativoBtn.png">
+			 	 	<img width="70" ng-if="!mostrarNegativo" src="img/negativoBtn_pressed.png">
+			 	 </ion-radio>
+			</ion-list>
+	  </div>
+ 	  <div class="col col-33">
+ 	  	  <ion-list>
+			 	 <ion-radio ng-model="data.opcion" ng-value="'Informativo'" ng-click="opcionInformativo()"  class="radioPositivo">
+			 	 	<img width="70" ng-if="mostrarInformativo" src="img/informativoBtn.png">
+			 	 	<img width="70" ng-if="!mostrarInformativo" src="img/informativoBtn_pressed.png">
+			 	 </ion-radio>
+			</ion-list>
+ 	  </div>
+	</div>
+
+	<!-- ************************************************************* -->
+
+	<div class="row" ng-show="cerrarShow">
+      	<div class="col col-100 centrar"> 
+      		<a ng-click="cerrarFoto()"  class="cerrarIcono" style="position: absolute; top: 200px; left: 160px;" >
+				<img  width="40" src="img/cerrar.png">
+			</a>
+	 	</div>
+	</div>
+<!-- ************************************************************* -->
+
+	<div class="row">
+      	<div class="col col-100 centrar"> 
+      		<img ng-show="imgURI != null" ng-src="{{imgURI}}" style="text-align: center, width=120px; height: 120px; ">
+	 	</div>
+	</div>
+<!-- ************************************************************* -->
+
+
+	<div class="row" ng-show="camaraIcono">
+      	<div class="col col-100 centrar"> 
+      		
+      		<a ng-click="foto()" >
+				<img  width="130" src="img/tom-foto.png">
+			</a>
+	 	</div>
+	</div>
+	<!-- ************************************************************* -->
+	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar">
+	  	<textarea ng-model="data.campocomentario" rows="6"  maxlength="400" placeholder="Máximo de carateres 400" class="text-area-comentario"></textarea>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<div class="row">
+		<!-- <div class="col col-50 derecha" >
+			<a ng-click="$ionicGoBack()" >
+				<img class="alineacion-vertical" src="img/atras.png" width="100">
+			</a>
+		</div> -->
+		<div class="col col-100 centrar" >
+			<a ng-click="enviar()" >
+				<img class="alineacion-vertical" src="img/enviar.png" width="100">
+			</a>
+		</div>
+	</div>
+
+  </ion-content>
+ 
+</ion-view>

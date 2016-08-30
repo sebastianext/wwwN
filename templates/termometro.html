@@ -1,0 +1,108 @@
+
+  <ion-content class="publicaciones-tabs-items" style="background:white">
+  		<div class="row no-padding-bottom no-padding-top">
+        <div class="col col-100 no-padding-bottom no-padding-top centrar">
+            <ion-spinner icon="spiral" class="cargando" ng-if="mostrarCargar" ></ion-spinner>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80 centrar">
+
+            <strong>De:</strong> {{fechainicio| date:'dd/MM/yyyy'}} <strong>a</strong> {{fechaFin| date:'dd/MM/yyyy'}} 
+        </div>
+        <div class="col col-10"></div>
+      </div> 
+
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80 centrar">
+            <strong ng-if="mostrarGeneral">Total reportes: {{obj[0].meta + obj[1].meta + obj[2].meta}}</strong>
+            <strong ng-if="mostrarClientes">Total opinión de nuestros clientes: {{obj[0].meta}}</strong>
+            <strong ng-if="mostrarVenta">Total ejecución impecable: {{obj[1].meta }}</strong>
+            <strong ng-if="mostrarCompetencia">Total la competencia: {{obj[2].meta }}</strong>
+        </div>
+        <div class="col col-10"></div>
+      </div> 
+
+      <div class="row termometro no-padding-bottom no-padding-top">
+        <div class="col col-100 no-padding-bottom no-padding-top ">
+            <div class="row"> 
+                <div class="col col-10 centrar  no-padding-bottom no-padding-top">
+                    <img src="img/termometro_term.png" width="90">   
+                </div>
+                <div class="col col-100 no-padding-bottom no-padding-top resultadoTermometro"  >
+                     <div class="row" ng-if="mostrarGeneral" ng-repeat="objeto in porcentajesGeneral | orderBy :'-valor'" >
+                         <div class="col col-10 centrar blaco no-padding"><span>{{ objeto.valor}}</span></div>
+                         <div class="col col-20"><span class="linea-termometro"></span></div>
+                         <div class="col col-80"><span>{{ objeto.nombre}}</span> </div>
+                    </div> 
+                </div>
+             
+
+                <div class="col col-100 no-padding-bottom no-padding-top resultadoTermometro" >
+                  <div class="row" ng-if="mostrarClientes" ng-repeat="objeto in porcentajesClientes | orderBy :'-valor'">
+                           <div class="col col-10 centrar blaco no-padding"><span>{{ objeto.valor}}</span></div>
+                           <div class="col col-20"><span class="linea-termometro"></span></div>
+                           <div class="col col-80"><span>{{ objeto.nombre}}</span> </div>
+                  </div>
+                </div>
+
+
+                <div class="col col-100 no-padding-bottom no-padding-top resultadoTermometro" >
+                  <div class="row" ng-if="mostrarVenta" ng-repeat="objeto in porcentajesVentas | orderBy :'-valor'">
+                           <div class="col col-10 centrar blaco no-padding"><span>{{ objeto.valor}}</span></div>
+                           <div class="col col-20"><span class="linea-termometro"></span></div>
+                           <div class="col col-80"><span>{{ objeto.nombre}}</span> </div>
+                  </div>
+                </div>
+
+
+                <div class="col col-100 no-padding-bottom no-padding-top resultadoTermometro" >
+                  <div class="row" ng-if="mostrarCompetencia" ng-repeat="objeto in porcentajesCompetencia | orderBy :'-valor'">
+                           <div class="col col-10 centrar blaco no-padding"><span>{{ objeto.valor}}</span></div>
+                           <div class="col col-20"><span class="linea-termometro"></span></div>
+                           <div class="col col-80"><span>{{ objeto.nombre}}</span> </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+      </div> 
+    <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80 centrar">
+            <strong ng-if="mostrarGeneral">Total Anual: {{obj[0].total + obj[1].total + obj[2].total}}</strong>
+            <strong ng-if="mostrarClientes">Total Reportes: {{obj[0].total}}</strong>
+            <strong ng-if="mostrarVenta">Total Reportes: {{obj[1].total }}</strong>
+            <strong ng-if="mostrarCompetencia">Total Reportes: {{obj[2].total }}</strong>
+        </div>
+        <div class="col col-10"></div>
+      </div> 
+
+  		<div class="row">
+  			<div class="col col-33 centrar">
+          <a ng-click="termometroCliente()">
+  				  <!-- <img src="img/globoBtn.png" width="50" > -->
+            <img src="img/globoBtn.png" width="60" ng-if="!mostrarOpinion"> 
+            <img src="img/globoBtn_pressed.png" width="60" ng-if="mostrarOpinion"> 
+          </a>
+  			</div>
+    		<div class="col col-33 centrar">
+          <a ng-click="termometroVenta()">
+    			   <!-- <img src="img/homeBtn.png" width="50"> -->
+             <img src="img/homeBtn.png" width="60" ng-if="!mostrarEjecucion"> 
+              <img src="img/homeBtn_pressed.png" width="60" ng-if="mostrarEjecucion">
+          </a>
+    		</div>
+    		<div class="col col-33 centrar">
+          <a ng-click="termometroCompetencia()">
+    			   <!-- <img src="img/vsBtn.png" width="50"> -->
+              <img src="img/vsBtn.png" width="60" ng-if="!mostrarCompetencia2">
+              <img src="img/vsBtn_pressed.png" width="60" ng-if="mostrarCompetencia2"> 
+          </a>
+    		</div>
+  		</div> 
+  </ion-content>
+

@@ -1,0 +1,66 @@
+<ion-view view-title="" class="fondo-dllo-clientes">
+
+  <ion-content class="margin-top-60">
+ 	
+   	<div class="row ">
+   		<div class="col col-100 centrar" >
+   			<h5 class="verde">{{data.nombrePVD +'-'+ data.codigo}}</h5>
+   		</div>
+	</div>
+	<!-- ********************************************************* -->
+	
+	<br>
+	<div class="row">
+		<div class="col col-50">
+     		<label class="letra verde "># Activ.Cciales:</label>
+     	</div>
+     	<div class="col col-50" >
+	     	<label class="letra">{{data.ActiCciales }}</label>
+	     	<a href="#/app/vicClientes-cciales" class="recuadroPlus"><i class="ion-plus"></i></a>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-50">
+     		<label class="letra verde "># de Activos Instalados:</label>
+     	</div>
+     	<div class="col col-50" >
+	     	<label class="letra">{{data.activos}}</label>
+	     	<a href="#/app/vicClientes-instalados" class="recuadroPlus"><i class="ion-plus"></i></a>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-50">
+	     	<label class="letra verde ">Mercaderista:</label>
+     	</div>
+     	<div class="col col-50">
+	     	<label class="letra "> {{data.mercaderista >0 ? 'SI': 'NO'}}</label>
+	     	<a href="#/app/vicClientes-mercaderista" class="recuadroPlus"><i class="ion-plus"></i></a>
+		</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-50 " >
+     		<label class="letra verde ">Nombre desarrollador:</label>
+     	</div>
+     	<div class="col col-50" >
+     		<label class="letra "> {{data.desarrollador ? data.desarrollador : 'N/A'}}</label>
+     	</div>
+	</div>
+	
+		
+  </ion-content>
+ <!--  <div class="bar bar-footer no-padding" style="height:80px;">
+	 	<div class="row no-padding">
+			<div class="col col-25 centrar no-padding" >
+				<a href="#/app/vicDetalles" >
+					<img class="alineacion-vertical" src="img/desarrollo-de-clientes.png">
+				</a>
+			</div>
+			
+		</div>
+	  
+	</div> -->
+</ion-view>

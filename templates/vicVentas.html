@@ -1,0 +1,88 @@
+<ion-view view-title="" class="fondo-ventas">
+
+  <ion-content class="margin-top-60" >
+  	
+   	<div class="row ">
+   		<div class="col col-100 centrar" >
+   			<h5 class="verde">{{data.nombrePVD +'-'+ data.codigo}}</h5>
+   		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<br>
+	<div class="row"  >
+		<div class="col col-40 " >
+     		<label class="letra verde ">Fecha Actualización:</label>
+     	</div>
+     	<div class="col col-60" >
+	     	<label class="letra "> {{data.fecha ? data.fecha : 'N/A'}}</label>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-40 " >
+     		<label class="letra verde ">Ventas Mes:</label>
+     	</div>
+     	<div class="col col-60" >
+	     	<label class="letra "> {{data.ventasMes ? (data.ventasMes   | currency ) : 'N/A'}}</label>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row">
+		<div class="col col-40 " >
+	     	<label class="letra verde ">Ventas Acum.(Año):</label>
+     	</div>
+     	<div class="col col-60" >
+	     	<label class="letra "> {{data.ventasAcum ? ( data.ventasAcum | currency ) : 'N/A'}}</label>
+		</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-40 " >
+     		<label class="letra verde ">% Ejec.Pptal Mes:</label>
+     	</div>
+     	<div class="col col-60" >
+     		<label class="letra "> {{data.EjecMes ? (data.EjecMes+'%') : '0%'}}</label>
+     	</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row " >
+		<div class="col col-40 no-padding-bottom " >
+	     	<label class="letra verde ">% Ejec.Pptal Acum:</label>
+     	</div>
+     	<div class="col col-60" >
+     		<label class="letra ">{{data.EjecAcum ? (data.EjecAcum +'%') : '0%'}}</label>
+     	</div>
+
+	</div>
+	<br>
+	<div class="row ">
+   		<div class="col col-100 centrar" >
+   			<h5 class="verde">Ventas por Negocio Mes</h5>
+   		</div>
+	</div>
+	<br>
+
+	<div class="row borde-top" ng-repeat="obj in datos"  >
+		<div class="col col-50" >
+	     	<label class="letra verde">{{obj.Negocio}}</label>
+     	</div>
+     	<div class="col col-50" >
+     		<label class="letra">{{obj.VentaMes ? ( obj.VentaMes| currency ) : 'N/A'}}</label>
+     	</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<br>
+		
+  </ion-content>
+  <!-- <div class="bar bar-footer no-padding" style="height:80px;">
+	 	<div class="row no-padding">
+			<div class="col col-25 centrar no-padding" >
+				<a href="#/app/vicDetalles" >
+					<img class="alineacion-vertical" src="img/ventas2.png">
+				</a>
+			</div>
+		</div>
+	</div> -->
+</ion-view>

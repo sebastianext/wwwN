@@ -1,0 +1,73 @@
+<ion-view view-title="" class="fondo-mensajes">
+	
+  <ion-content class="margin-bottom-50 margin-top-60">
+  
+  	<div class="marcoImagix">
+	  	<ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)" >
+		  <ion-slide ng-repeat="obj in datos">
+		    <div class="box blue">
+		    	<h4>Detalle del caso enviado</h4>
+		    	<br>
+		    	<input type="hidden" name="" ng-model="data.idmodel" class="idmodel" value="{{obj.idinforme}}">
+		 		<strong>Canal:</strong>
+		 		<span>{{obj.canal}}</span>
+		 		<br>
+		 		<strong>Nombre del establecimiento:</strong>
+		 		<span>{{obj.nombreEmpresa}}</span>
+		 		<br>
+		 		<strong>Ciudad:</strong>
+		 		<span>{{obj.ciudad}}</span>
+		 		<br>
+		 		<strong>Fecha y hora de reporte:</strong>
+		 		<span>{{obj.fecha}}</span>
+		 		<br>
+		 		<strong>Tipo de caso:</strong>
+		 		<span>{{obj.resultadoInforme}}</span>
+		 		<br>
+		 		<strong>Proceso:</strong>
+		 		<span>{{obj.tipoProceso}}</span>
+		 		<br>
+		 		<strong>Sub proceso:</strong>
+		 		<span>{{obj.categoria_actividad ? obj.categoria_actividad : ' '}} </span>
+		 		<br>
+		 		<strong>Nombre del contacto:</strong>
+		 		<span>{{obj.nombreContacto}}</span>
+		 		<br>
+		 		<strong>Reporte:</strong>
+		 		<span ng-if="obj.formato=='texto'">{{obj.resInforme}}</span>
+		 		<br>
+		 		<img  ng-if="obj.formato=='imagen'" ng-src="{{url + obj.resInforme}}" style="width: 190px;height: 150px;" />
+		    </div>
+		  </ion-slide>
+
+		</ion-slide-box>
+
+	 </div>
+
+	  <div class="row ">
+	    <div class="col col-10" ></div>
+	    <div class="col col-80  centrar ">
+	    	<a ng-click="previousSlide()">← Anterior</a> | <a ng-click="nextSlide()">Siguiente →</a>
+	    </div>
+	    <div class="col col-10" ></div>
+	  </div>
+	  <br>
+
+	 <div class="row">
+		<!-- <div class="col col-50 derecha" >
+			<a ng-click="$ionicGoBack()" >
+				<img class="alineacion-vertical" src="img/atras.png" width="100">
+			</a>
+		</div> -->
+
+		<div class="col col-100 centrar" >
+			<a ng-click="eliminarReporte()" >
+				<img class="alineacion-vertical" src="img/eliminar.png" width="100">
+			</a>
+		</div>
+		
+	</div>
+
+  </ion-content>
+
+</ion-view>

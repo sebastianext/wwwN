@@ -1,0 +1,37 @@
+<ion-view view-title=""  class="fondo-mensajes">
+  <ion-content class="margin-bottom-50 margin-top-60">
+  <!-- *********************************************************** -->
+
+      <div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80 letra justificado" >
+	  	<p>Escribe los inconvenientes que puedas haber presentado al momento de reportar los casos.</p>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+
+<!-- *********************************************************** -->
+	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar">
+	  	<textarea ng-model="data.campocomentario" rows="8"  maxlength="400" placeholder="Máximo de carateres 400" class="text-area-comentario"></textarea>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+<!-- *********************************************************** -->
+
+	<div class="row">
+		<div class="col col-50 derecha" >
+			<a ng-click="atras()" >
+				<img class="alineacion-vertical" src="img/atras.png" width="100">
+			</a>
+		</div>
+
+		<a ng-click="enviar()" >
+			<div class="col col-50" >
+				<img class="alineacion-vertical" src="img/enviar.png" width="100">
+			</div>
+		</a>
+	</div>
+  </ion-content>
+</ion-view>

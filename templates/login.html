@@ -1,0 +1,38 @@
+<ion-modal-view class="login-fondo">
+
+  <ion-content>
+   
+    <form  ng-submit="login()" class="form">
+       <div class="row">
+        <div class="col col-100 centrar" >
+            <img class="alineacion-vertical" src="img/logo.png" width="230">
+          </a>
+        </div>
+      </div>
+      
+      <div class="list list-inset contenedor-login">
+        <label class="item item-input sin-borde ">
+          <span class="usuario"></span>
+          <input type="text" ng-model="data.username" placeholder="Usuario">
+        </label>
+        <br>
+        <label class="item item-input sin-borde ">
+          <span class="contrasena"></span>
+          <input type="password" ng-model="data.password" placeholder="Contraseña">
+        </label>
+        <label class="item sin-borde login-fondo-label centrar">
+          <!-- <a ng-click="login();"> -->
+          <button class="button btn-login" type="submit">
+              <img class="alineacion-vertical" src="img/btnIniciar.png" width="120" >
+          <!-- </a> -->
+          </button>
+        </label>
+      </div>
+    </form>
+    
+    
+    
+    <div class="bar bar-footer fondo-footer-login"></div>
+  </ion-content>
+
+</ion-modal-view>

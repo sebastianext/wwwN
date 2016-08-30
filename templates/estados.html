@@ -1,0 +1,73 @@
+<ion-view view-title="" class="fondo-mensajes">
+  <ion-content class="margin-bottom-50">
+  <!-- <div class="row">
+      <div class="col col-10" ></div>
+    <div class="col col-80 letra justificado azul" >
+      <p>Aquí encuentras los mensajes enviados por el administrador.</p>
+    </div>
+    <div class="col col-10" ></div>
+  </div> -->
+    <br>
+    <div class="list lista-notificaciones">
+
+      <ion-spinner icon="spiral" class="cargando" ng-if="mostrar"></ion-spinner>
+      <a class="item item-icon-right" 
+      
+      ui-sref="app.verMensajeRespuesta({parametro:obj.idrespuestaInforme})"
+      ng-repeat="obj in datos" 
+      ng-class="{'noVisto':(obj.visto=='0')}"
+      >
+
+        <!-- <h2  ng-bind="obj.fecha | date:'MM/dd/yyyy'"></h2> -->
+        <h2 >{{obj.fecha | date:'MM/dd/yyyy'}}</h2>
+        <p>{{(obj.respuesta  | limitTo:30) + (obj.respuesta .length > 30 ? '...' : '')}} </p>
+        <i class="icon ion-ios-arrow-right" ></i>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="col col-10">
+        
+      </div>
+      <div class="col col-80 centrar">
+          <ul>
+                <li ng-click="consultarReporte(activa-1);" 
+                      class="item-paginador"
+                      ng-if="activa!=1">
+                    <span ><</span>
+                  </li>
+                  <li ng-repeat="i in getNumber(paginas) track by $index" 
+                      ng-click="consultarReporte(inicio+$index);" 
+                      ng-if="$index<=2"
+                      class="item-paginador"
+                      ng-class="{'item-paginador-activo':activa== $index+inicio,'paginador-activo':activa!= $index+inicio}">
+                    <span  >
+                      {{($index+1 <=fin )? inicio+$index: inicio+$index}}
+                      </span>
+                  </li>
+                  <li ng-click="consultarReporte(activa+1);" 
+                      class="item-paginador"
+                      ng-if="activa!=pags">
+                    <span >></span>
+                  </li>
+          </ul>
+      </div>
+      <div class="col col-10">
+        
+      </div>
+    </div>
+
+    <!-- <div class="row no-padding-bottom">
+      <div class="col col-10" ></div>
+    <div class="col col-80  centrar no-padding-bottom" >
+    <div>
+      <a class="button button-icon icon" ng-click="$ionicGoBack()" >
+          <img class="alineacion-vertical" src="img/atras.png" width="100">
+      </a> 
+    </div>
+    </div>
+    <div class="col col-10" ></div> -->
+  <!-- </div> -->
+
+  </ion-content>
+</ion-view>

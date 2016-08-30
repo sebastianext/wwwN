@@ -1,0 +1,88 @@
+<ion-view view-title="" class="fondo-mensajes">
+  <ion-content class="margin-bottom-50 margin-top-60">
+  <div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80 letra justificado azul" >
+	      <h4>Gestión del reporte:</h4>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+  	
+    
+
+    <div class="row">
+      <div class="col col-10" ></div>
+      <div class="col col-80" >
+      <div>
+        <p>{{datos.respuesta + ' '+ datos.idrespuestaInforme}}</p>
+      </div>
+      </div>
+      <div class="col col-10" ></div>
+    </div>
+
+    <div class="row">
+      <div class="col col-10" ></div>
+      <div class="col col-80" >
+          <div class="box blue">
+            <h4>Detalle del caso enviado</h4>
+              <br>
+              <strong>Canal:</strong>
+              <span>{{datos.canal}}</span>
+              <br>
+              <strong>Nombre del establecimiento:</strong>
+              <span>{{datos.nombreEmpresa}}</span>
+              <br>
+              <strong>Ciudad:</strong>
+              <span>{{datos.ciudad}}</span>
+              <br>
+              <strong>Fecha y hora de reporte:</strong>
+              <span>{{datos.fecha}}</span>
+              <br>
+              <strong>Tipo de caso:</strong>
+              <span>{{datos.resultadoInforme}}</span>
+              <br>
+              <strong>Proceso:</strong>
+              <span>{{datos.tipoProceso}}</span>
+              <br>
+              <strong>Sub proceso:</strong>
+              <span>{{datos.categoria_actividad ? datos.categoria_actividad : ' '}} </span>
+              <br>
+              <strong>Nombre del contacto:</strong>
+              <span>{{datos.nombreContacto}}</span>
+              <br>
+              <strong>Reporte:</strong>
+              <span ng-if="datos.formato=='texto'">{{datos.resInforme}}</span>
+              <br>
+              <img  ng-if="datos.formato=='imagen'" ng-src="{{url + datos.resInforme}}" style="width: 190px;height: 150px;" />
+          </div>          
+      </div>
+      <div class="col col-10" ></div> 
+     </div>
+
+    <!-- <div class="row">
+      <div class="col col-10" ></div>
+      <div class="col col-80" >
+      <div>
+        <strong>Fecha y hora del mensaje: </strong><p>{{datos.fecha}}</p>
+      </div>
+      </div>
+      <div class="col col-10" ></div>
+    </div> -->
+ 
+
+   <div class="row">
+
+    <div class="col col-50 derecha" >
+      <a ng-click="$ionicGoBack()" id="atrasMensaje" >
+        <img class="alineacion-vertical" src="img/atras.png" width="100">
+      </a>
+    </div>
+
+    <a ng-click="eliminarMensaje(datos.idInforme)" >
+      <div class="col col-50" >
+        <img class="alineacion-vertical" src="img/eliminar.png" width="100">
+      </div>
+    </a>
+  </div>
+  </ion-content>
+</ion-view>

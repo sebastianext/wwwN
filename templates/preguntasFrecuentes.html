@@ -1,0 +1,31 @@
+<ion-view view-title=""  class="fondo-preguntas-frecuentes">
+  <ion-content class="margin-bottom-50 margin-top-60">
+ 
+	<div class="row" ng-repeat="obj in datos">
+  		<div class="col col-100">
+		  	<div class="row">
+		  		
+				<div class="col col-100 contenedor-pregunta">
+					<h5>{{obj[1]}}</h5>
+				</div>
+				
+		  	</div>
+		  	<div class="row">
+		  		
+				<div class="col col-100"  >
+					<span ng-bind-html="obj[2]"></span>
+				</div>
+				
+		  	</div>
+	  	</div>
+  	</div>
+
+  	<div class="row">
+		<div class="col col-100 centrar" >
+			<a ng-click="atras()" >
+				<img class="alineacion-vertical" src="img/atras.png" width="100">
+			</a>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

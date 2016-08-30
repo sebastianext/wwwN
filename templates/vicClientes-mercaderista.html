@@ -1,0 +1,50 @@
+<ion-view view-title="" class="fondo-dllo-clientes">
+
+  <ion-content class="margin-top-60">
+  	
+   	<div class="row ">
+   		<div class="col col-100 centrar" >
+   			<h5 class="verde">{{data.nombrePVD +'-'+ data.codigo}}</h5>
+   		</div>
+	</div>
+	<!-- ********************************************************* -->
+	
+	<br>
+	<div class="row borde-bottom"  >
+		<div class="col col-40" >
+     		<label class="letra verde "><b>Mercaderista</b></label>
+     	</div>
+     	<div class="col col-30" >
+	     	<label class="letra verde "><b>Hora/Sem.</b></label>
+		</div>
+		<div class="col col-30" >
+	     	<label class="letra verde "><b>Frec./Sem.</b></label>
+		</div>
+	</div>
+	<div class="row borde-bottom" ng-repeat="obj in datos" >
+		<div class="col col-40" >
+     		<label class="letra">{{obj.NombreMercaderista}}</label>
+     	</div>
+     	<div class="col col-30" >
+	     	<label class="letra">{{obj.Horas}}</label>
+		</div>
+		<div class="col col-30" >
+	     	<label class="letra">{{obj.Frecuencia}}</label>
+		</div>
+	</div>
+	
+	
+		
+  </ion-content>
+ <!--  <div class="bar bar-footer no-padding" style="height:80px;">
+	 	<div class="row no-padding">
+			<div class="col col-25 centrar no-padding" >
+				<a href="#/app/vicDetalles" >
+					<img class="alineacion-vertical" src="img/desarrollo-de-clientes.png">
+				</a>
+			</div>
+			
+		</div>
+	  
+	</div> -->
+</ion-view>

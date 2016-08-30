@@ -1,0 +1,143 @@
+<ion-view view-title="" class="fondo-vista-integral">
+
+  <ion-content class="margin-top-60" style="margin-bottom: 77px;">
+	
+   	<div class="row ">
+   		<div class="col col-100 centrar" >
+   			<h5 class="verde">{{data.nombrePVD +'-'+ data.codigo}}</h5>
+   		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<br>
+	<div class="row"  >
+		<div class="col col-33 " >
+     		<label class="letra verde ">Jefe de ventas:</label>
+     	</div>
+     	<div class="col col-67" >
+	     	<label class="letra "> {{data.jefe ? data.jefe : 'N/A'}}</label>
+	     	
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-33 " >
+     		<label class="letra verde ">Vend/Coord.Ind:</label>
+     	</div>
+     	<div class="col col-67" >
+	     	<label class="letra "> {{data.vendedor ? data.vendedor : 'N/A'}}</label>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-33 " >
+	     	<label class="letra verde ">Nivel de Servicio:</label>
+     	</div>
+     	<div class="col col-67" >
+	     	<label class="letra "> {{data.NivelServicio ? data.NivelServicio : 'N/A'}}</label>
+		</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-33 " >
+     		<label class="letra verde ">El - Natural:</label>
+     	</div>
+     	<div class="col col-67" >
+     		<label class="letra "> {{data.natural ? data.natural : 'N/A'}}</label>
+     	</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row " >
+		<div class="col col-33 no-padding-bottom " >
+	     	<label class="letra verde ">Cond.Pago:</label>
+     	</div>
+     	<div class="col col-67" >
+     		<label class="letra ">{{data.necesidadlModel ? data.necesidadlModel : 'N/A'}}</label>
+     	</div>
+
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row" >
+		<div class="col col-33" >
+     		<label class="letra verde ">Satisfacción:</label>
+     	</div>
+     	<div class="col col-67" >
+     		<label class="letra ">{{data.potencialModel ? data.potencialModel : 'N/A'}}</label>
+     	</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row" >
+		<div class="col col-33" >
+     		<label class="letra verde ">Lealtad:</label>
+     	</div>
+     	<div class="col col-67" >
+     		<label class="letra ">{{data.potencialModel ? data.potencialModel : 'N/A'}}</label>
+     	</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row" >
+		<div class="col col-33" >
+			<div class="row no-padding" >
+				<div class="col col-50 no-padding" >
+		     		<label class="letra verde ">Quejas:</label>
+		     	</div>
+		     	<div class="col col-50 no-padding" >
+		     		<label class="letra">{{data.quejas}}</label>
+		     		<a 
+		     		 ui-sref="app.vicDetallesQuejasSolicitudes({parametro:'1'})"
+		     		 class="recuadroPlus" ng-if="data.quejas>0">
+		     		 <i class="ion-plus"></i>
+		     		</a>
+		     	</div>
+			</div>
+     		<!-- <label class="letra verde ">Quejas:</label> -->
+     	</div>
+     	<div class="col col-67" >
+     		<div class="row no-padding" >
+				<div class="col col-40 no-padding" >
+		     		<label class="letra verde ">Solicitudes:</label>
+		     	</div>
+		     	<div class="col col-60 no-padding" >
+		     		<label class="letra">{{data.solicitudes}}</label>
+		     		<a 
+		     		ui-sref="app.vicDetallesQuejasSolicitudes({parametro:'2'})"
+		     		class="recuadroPlus" ng-if="data.solicitudes>0">
+		     			<i class="ion-plus"></i>
+		     		</a>
+		     	</div>
+			</div>
+     		<!-- <label class="letra verde ">Solicitudes:</label> -->
+     	</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<br>
+		
+  </ion-content>
+  <div class="bar bar-footer no-padding" style="height:80px; background: none;">
+	 	<div class="row no-padding">
+			<div class="col col-25 centrar no-padding" >
+				<a href="#/app/vicVentas" >
+					<img class="alineacion-vertical" src="img/ventas2.png">
+				</a>
+			</div>
+			<div class="col col-25 centrar no-padding" >
+				<a href="#/app/vicRelacionamiento" >
+					<img class="alineacion-vertical" src="img/relacionamiento2.png">
+				</a>
+			</div>
+			<div class="col col-25 centrar no-padding" >
+				<a href="#/app/vicClientes" >
+					<img class="alineacion-vertical" src="img/desarrollo-de-clientes.png">
+				</a>
+			</div>
+			<div class="col col-25 centrar no-padding" >
+				<a ng-click="reportePopup()" >
+					<img class="alineacion-vertical" src="img/nuestro.png">
+				</a>
+			</div>
+		</div>
+	  
+	</div>
+</ion-view>

@@ -1,0 +1,80 @@
+<ion-view view-title="" class="fondo-mensajes">
+	
+  <ion-content class="margin-top-60">
+  	<!-- **************************************************************** -->
+
+  	<!-- **************************************************************** -->
+   	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80 letra texto-opinion" >
+	  	<p class="justificado">Aquí encuentras la gestión que realizamos con los clientes de acuerdo con tus reportes</p>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<br>
+	<!-- **************************************************************** -->
+	<div class="row no-padding-bottom">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar no-padding-bottom height50" >
+		<div>
+			<a class="button button-icon icon a-lista" href="#/app/casosCreados">
+			  	<span class="fondo-btn padding-reportes verde">Reportes Enviados</span>
+		 	</a> 
+	 	</div>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<!-- **************************************************************** -->
+	<div class="row no-padding-bottom">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar no-padding-bottom height50">
+	  	<div>
+	  		<a class="button button-icon icon a-lista" href="#/app/estados">
+		  		<span class="fondo-btn padding-gestion verde">Gestión Reportes</span>
+		 	</a> 
+	  	</div>
+	  	<div class="burbuja2" ng-if="mostrar1"><div>{{data.mensajes1}}</div></div>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<!-- **************************************************************** -->
+	<div class="row no-padding-bottom">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar no-padding-bottom height50" >
+		<div>
+			<a class="button button-icon icon a-lista" href="#/app/notificaciones"> 
+			  	<span class="fondo-btn padding-notificaciones verde">Notificaciones</span>
+		 	</a> 
+	 	</div>
+	 	<div class="burbuja2" ng-if="mostrar2"><div>{{data.mensajes2}}</div></div>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+
+	<div class="row no-padding-bottom">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar no-padding-bottom height50" >
+		<div>
+			<a class="button button-icon icon a-lista" href="#/app/solucionInconvenientes">
+			  	<span class="fondo-btn padding-solucion verde">Solución Inconvenientes</span>
+		 	</a> 
+	 	</div>
+	 	<div class="burbuja2" ng-if="mostrar3"><div>{{data.mensajes3}}</div></div>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+
+	<div class="row no-padding-bottom">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar no-padding-bottom height50" >
+		<div>
+			<a class="button button-icon icon a-lista" href="#/app/gestionImagix">
+			  	<span class="fondo-btn padding-imagix verde">Gestión Imagix</span>
+		 	</a> 
+	 	</div>
+	 	<div class="burbuja2" ng-if="mostrar4"><div>{{data.mensajes4}}</div></div>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+  </ion-content>
+</ion-view>

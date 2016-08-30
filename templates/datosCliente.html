@@ -1,0 +1,224 @@
+<ion-view view-title="" class="fondo-datos-cliente">
+	<!--<div class="row">
+		      <div class="col col-67 letra rojo font22 titulos"  >
+		      		<p>Datos Clientes</p>
+		      </div>
+			  <div class="col col-33 " >
+			  		<img class="alineacion-vertical" src="img/cliente.png" width="80"> 	
+			  </div>
+		</div>-->
+  <ion-content class="margin-top-60">
+   	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80 letra justificado text-descripcion" >
+	  	<p>Dar clic en la lupa, digita y seleccione la ciudad, luego busca el cliente y selecciona el punto de venta correspondiente, los datos se llenarán automaticamente.</p>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row no-padding-bottom">
+		<div class="col col-33 no-padding-bottom " >
+			<label class="letra verde">Ciudad(mpio) * </label>
+		</div>
+		<div class="col col-50 no-padding-bottom" >
+     	
+	     	<input type="text" name="" class="inline-block campo-clientes input" ng-model="data.ciudadModel">
+		    
+		</div>
+		<div class="col col-10 no-padding-bottom no-padding-top" >
+			<button class="button button-icon icon" 
+			modal-select="" 
+			ng-model="data.ciudadModel" 
+			options="selectableCiudades" 
+			modal-title="Ciudades" 
+			has-search="true"  
+			clear-search-on-select="true"  
+			search-placeholder="Buscar" 
+			hide-reset="true" 
+			cancel-button="Cerrar"  
+			header-footer-class="colorModal" 
+			clear-search-on-select="true">
+					  <img class="alineacion-vertical" src="img/buscar.png" width="30"> 	
+					  <div class="option">
+					    {{option}}
+					  </div>
+			</button>	
+		</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row no-padding-bottom">
+		<div class="col col-33 no-padding-bottom " >
+     		<label class="letra verde">Nombre PVD * </label>
+     	</div>
+     	<div class="col col-50 no-padding-bottom" >
+	     	<input type="text" name="" class="inline-block campo-clientes" ng-model="data.nombreModel">
+		</div>
+		<div class="col col-10 no-padding-bottom no-padding-top">
+		 <button class="button button-icon icon" 
+			 modal-select="" 
+			 ng-model="data.nombreModel" 
+			 options="selectableNombres" 
+			 has-search="true"
+			 modal-title="Nombres PDV" 
+			 on-select="cargarInfoCliente(newValue)"
+			 has-search="true"  
+			 clear-search-on-select="true"  
+			 search-placeholder="Buscar" 
+			 hide-reset="true" 
+			 cancel-button="Cerrar"  
+			 clear-search-on-select="true"
+			 header-footer-class="colorModal" 
+			 ng-click="buscarCliente($event,'nombre');"
+		 >
+				  <img class="alineacion-vertical" src="img/buscar.png" width="30"> 	
+				  <div class="option">
+				    {{option}}
+				  </div>
+			</button>	
+		</div>
+	</div>
+
+		<!-- ********************************************************* -->
+	<div class="row no-padding-bottom">
+		<div class="col col-33 no-padding-bottom " >
+     		<label class="letra verde">Nit/Cod Sap/Ecom</label>
+     	</div>
+     	<div class="col col-50 no-padding-bottom" >
+	     	<input type="text" name="" class="inline-block campo-clientes" ng-model="data.nitModel">
+		   
+		</div>
+		<div class="col col-10 no-padding-bottom no-padding-top">
+		 <button class="button button-icon icon" 
+		 modal-select="" 
+		 ng-model="data.nombreModel" 
+		 options="selectableNombres" 
+		 has-search="true"
+		 modal-title="Nombres PDV" 
+		 on-select="cargarInfoCliente(newValue)"
+		 has-search="true"  
+		 clear-search-on-select="true"  
+		 search-placeholder="Buscar" 
+		 hide-reset="true" 
+		 cancel-button="Cerrar"  
+		 clear-search-on-select="true"
+		 header-footer-class="colorModal" 
+		 ng-click="buscarCliente($event,'nit');"
+
+		 >
+				  <img class="alineacion-vertical" src="img/buscar.png" width="30"> 	
+				  <div class="option">
+				    {{option}}
+				  </div>
+			</button>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row">
+		<div class="col col-33" ></div>
+		<div class="col col-67 no-padding-top" >
+	     	<ion-list class="check">
+			  <ion-checkbox ng-model="data.nuevoClienteModel" class="letra verde">Cliente Nuevo</ion-checkbox>
+			</ion-list>
+		</div>
+	</div>
+		<!-- ********************************************************* -->
+	<div class="row">
+		<div class="col col-33 " >
+     		<label class="letra verde">Canal * </label>
+     	</div>
+     	<div class="col col-50" >
+	     	  <select ng-model="data.canalModel" class="campo-clientes"
+	     	  style="    background-image: url('img/combo.png');
+			    height: 40px;
+			    background-size: 100% 28px;
+			    background-repeat: no-repeat;
+			    -webkit-appearance: initial;
+			    border: none !important;">
+			    <option value="Autoservicios">Autoservicios</option>
+			    <option value="Institucional">Institucional</option>
+			    <option value="Alternativo">Alternativo</option>
+			    <option value="Grandes Cadenas">Grandes Cadenas</option>
+			    <option value="Tradicional">Tradicional</option>
+			    <option value="Industrial">Industrial</option>
+			  </select>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row">
+		<div class="col col-33 " >
+     		<label class="letra verde">Contacto PVD  </label>
+     	</div>
+     	<div class="col col-50" >
+     		<input type="text" name="" ng-model="data.contactoModel" class="campo-clientes">
+     	</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row no-padding-bottom">
+		<div class="col col-33 no-padding-bottom " >
+	     	<label class="letra verde">Teléfono * </label>
+     	</div>
+     	<div class="col col-50 no-padding-bottom" >
+     		<input type="text" name="" class="inline-block campo-clientes" ng-model="data.telefonoModel">
+		   
+		</div>
+		<div class="col col-10 no-padding-bottom no-padding-top">
+			 <button class="button button-icon icon" 
+			 modal-select="" 
+		 	 ng-model="data.nombreModel" 
+			 options="selectableNombres" 
+			 has-search="true"
+			 modal-title="Nombres PDV" 
+			 on-select="cargarInfoCliente(newValue)"
+			 has-search="true"  
+			 clear-search-on-select="true"  
+			 search-placeholder="Buscar" 
+			 hide-reset="true" 
+			 cancel-button="Cerrar"  
+			 clear-search-on-select="true"
+			 header-footer-class="colorModal" 
+			 ng-click="buscarCliente($event,'telefono');"
+			 >
+				  <img class="alineacion-vertical" src="img/buscar.png" width="30"> 	
+				  <div class="option">
+				    {{option}}
+				  </div>
+			</button>	
+		</div>
+
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row">
+		<div class="col col-33 " >
+     		<label class="letra verde">Dirección</label>
+     	</div>
+     	<div class="col col-50" >
+     		<input type="text" name="" ng-model="data.direccionModel" class="campo-clientes">
+     	</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row">
+		<div class="col col-50 derecha" >
+			<a ng-click="limpiarCampos()" >
+		 		<img class="alineacion-vertical" src="img/elim.png" width="40" height="40"> 
+		 	</a>
+		 </div>
+		 <div class="col col-50">	
+		 	 <a ng-click="cargarUltimoCliente()" >
+		 	 	<img class="alineacion-vertical" src="img/save-user.png" width="40" height="40"> 	
+		 	 </a>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<br>
+	<div class="row">
+		<div class="col col-100 centrar" >
+			<a ng-click="continuar()" >
+				<img class="alineacion-vertical" src="img/continuar.png" width="100">
+			</a>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

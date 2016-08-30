@@ -1,0 +1,182 @@
+<ion-view view-title="" class="fondo-vista-integral">
+  <ion-content class="margin-top-60">
+  	
+   	<div class="row">
+
+	  <div class="col col-100 letra centrar text-descripcion" style="font-size: 11px; line-height: initial;" >
+	  	<p>Si conoces el Nit/Cod Sap/Ecom digítalo y da clic en la lupa, de lo contrario selecciona la ciudad/municipio, luego busca el cliente por su nombre comercial o una parte de este, da clic en la lupa y selecciona el PDV, los datos se cargarán automáticamente.</p>
+	  </div>
+
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row no-padding-bottom">
+		<div class="col col-40 no-padding-bottom " >
+			<label class="letra verde letra-12px">Ciudad(mpio) *: </label>
+		</div>
+		<div class="col col-50 no-padding-bottom " >
+     	
+	     	<input type="text" name="" class="inline-block campo-clientes input" ng-model="data.ciudadModel" disabled>
+		    
+		</div>
+		<div class="col col-10 no-padding-bottom no-padding-top" >
+			<button class="button button-icon icon no-padding-left" 
+			modal-select="" 
+			ng-model="data.ciudadModel" 
+			options="selectableCiudades" 
+			modal-title="Ciudades" 
+			has-search="true"  
+			clear-search-on-select="true"  
+			search-placeholder="Buscar" 
+			hide-reset="true" 
+			cancel-button="Cerrar"  
+			header-footer-class="colorModal" 
+			clear-search-on-select="true">
+					  <img class="alineacion-vertical" src="img/buscar.png" width="30"> 	
+					  <div class="option">
+					    {{option}}
+					  </div>
+			</button>	
+		</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row no-padding-bottom">
+		<div class="col col-40 no-padding-bottom " >
+     		<label class="letra verde letra-12px">Nombre PVD *: </label>
+     	</div>
+     	<div class="col col-50 no-padding-bottom" >
+	     	<input type="text" name="" class="inline-block campo-clientes" ng-model="data.nombreModel">
+		</div>
+		<div class="col col-10 no-padding-bottom no-padding-top">
+		 <button class="button button-icon icon no-padding-left" 
+			 modal-select="" 
+			 ng-model="data.nombreModel" 
+			 options="selectableNombres" 
+			 has-search="true"
+			 modal-title="Nombres PDV" 
+			 on-select="cargarInfoCliente(newValue)"
+			 has-search="true"  
+			 clear-search-on-select="true"  
+			 search-placeholder="Buscar" 
+			 hide-reset="true" 
+			 cancel-button="Cerrar"  
+			 clear-search-on-select="true"
+			 header-footer-class="colorModal" 
+			 ng-click="buscarCliente($event,'nombre');"
+		 >
+				  <img class="alineacion-vertical" src="img/buscar.png" width="30"> 	
+				  <div class="option">
+				    {{option}}
+				  </div>
+			</button>	
+		</div>
+	</div>
+
+		<!-- ********************************************************* -->
+	<div class="row no-padding-bottom">
+		<div class="col col-40 no-padding-bottom " >
+     		<label class="letra verde letra-12px">Nit/Cod Sap/Ecom:</label>
+     	</div>
+     	<div class="col col-50 no-padding-bottom" >
+	     	<input type="text" name="" class="inline-block campo-clientes" ng-model="data.nitModel">
+		   
+		</div>
+		<div class="col col-10 no-padding-bottom no-padding-top">
+		 <button class="button button-icon icon no-padding-left" 
+		 modal-select="" 
+		 ng-model="data.nombreModel" 
+		 options="selectableNombres" 
+		 has-search="true"
+		 modal-title="Nombres PDV" 
+		 on-select="cargarInfoCliente(newValue)"
+		 has-search="true"  
+		 clear-search-on-select="true"  
+		 search-placeholder="Buscar" 
+		 hide-reset="true" 
+		 cancel-button="Cerrar"  
+		 clear-search-on-select="true"
+		 header-footer-class="colorModal" 
+		 ng-click="buscarCliente($event,'nit');"
+
+		 >
+				  <img class="alineacion-vertical" src="img/buscar.png" width="30"> 	
+				  <div class="option">
+				    {{option}}
+				  </div>
+			</button>
+		</div>
+	</div>
+		<!-- ********************************************************* -->
+	<div class="row" ng-if="mostrar" >
+		<div class="col col-40 " >
+     		<label class="letra verde letra-12px">Canal/Subcanal:</label>
+     	</div>
+     	<div class="col col-50" >
+	     	<label class="letra letra-12px"> {{data.canalModel ? data.canalModel : 'N/A'}}</label>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row" ng-if="mostrar" >
+		<div class="col col-40 " >
+	     	<label class="letra verde letra-12px">Teléfono:</label>
+     	</div>
+     	<div class="col col-50" >
+	     	<label class="letra letra-12px"> {{data.telefonoModel ? data.telefonoModel : 'N/A'}}</label>
+		</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row" ng-if="mostrar" >
+		<div class="col col-40 " >
+     		<label class="letra verde letra-12px">Dirección:</label>
+     	</div>
+     	<div class="col col-50" >
+     		<label class="letra letra-12px"> {{data.direccionModel ? data.direccionModel : 'N/A'}}</label>
+     	</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row " ng-if="mostrar">
+		<div class="col col-40 no-padding-bottom " >
+	     	<label class="letra verde letra-12px">Segmento x Necesidad:</label>
+     	</div>
+     	<div class="col col-50" >
+     		<label class="letra letra-12px">{{data.necesidadlModel ? data.necesidadlModel : 'N/A'}}</label>
+     	</div>
+
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row" ng-if="mostrar">
+		<div class="col col-40" >
+     		<label class="letra verde letra-12px">Segmento x Potencial:</label>
+     	</div>
+     	<div class="col col-50" >
+     		<label class="letra letra-12px">{{data.potencialModel ? data.potencialModel : 'N/A'}}</label>
+     	</div>
+	</div>
+
+	<!-- ********************************************************* -->
+	<div class="row">
+		<div class="col col-50 derecha" >
+			<a ng-click="limpiarCampos()" >
+		 		<img class="alineacion-vertical" src="img/elim.png" width="40" height="40"> 
+		 	</a>
+		 </div>
+		 <div class="col col-50">	
+		 	 <a ng-click="cargarUltimoCliente()" >
+		 	 	<img class="alineacion-vertical" src="img/save-user.png" width="40" height="40"> 	
+		 	 </a>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+
+	<br>
+	<div class="row" ng-if="mostrar" >
+		<div class="col col-100 centrar" >
+			<a ui-sref="app.vicDetalles({parametro:data.codigo,parametro2:data.nombreModel})" >
+				<img class="alineacion-vertical" src="img/mas-info.png" width="100">
+			</a>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

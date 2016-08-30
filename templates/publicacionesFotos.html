@@ -1,0 +1,76 @@
+
+  <ion-content class="publicaciones-tabs-items" id="contenedor" style="text-align: center; background:white">
+  	
+  	<!-- ********************************************************************* -->
+  		<ion-spinner icon="spiral" class="cargando" ng-if="mostrar" ></ion-spinner>
+    		<div class="row" ng-repeat="obj in datos" style="text-align: left;">
+                  <div class="col col-20"  >
+                      <img  src="img/icono-muro.png" width="60">  
+                  </div>
+                  <div class="col col-80" >
+                       <div class="row">
+                        <div class="col col-67"  >
+                            <h5>{{obj.titulo}}</h5>
+                          </div>
+                          <div class="col col-33 derecha">
+                            <h6>{{obj.fecha}}</h6>
+                          </div>
+                      </div>
+                  <div class="row">
+                    <div class="row">{{obj.texto}}</div> 
+                  </div>
+                    
+                    <div class="row">
+                      <div class="row img_publicacion">
+                        <img  class="width100" ng-src="http://celuweb.com/NUTRESAESCUCHACLIENTE/{{obj.imagen}}"  /> 
+                      </div> 
+                    </div>
+                    <div class="row">
+                      <div class="col col-20"  >
+                        <a ng-click="megustaPopupFotos(obj.idpublicacion);">
+                            <img  src="img/usuarios.png" width="35">  
+                          </a>
+                      </div>
+                      <div class="col col-80 derecha">
+                        <span class="numero-megusta">{{obj.cant}}</span>
+                        <img  ng-if="obj.megusta==0" ng-click="megustaPublicacion(obj.idpublicacion);" class="megusta-icono" src="img/btnMeGusta.png" width="80"> 	
+    			      	      <img  ng-if="obj.megusta==1" class="megusta-icono" src="img/tegusta.png" width="80"> 	
+                      </div>
+                    </div>
+                </div>
+        </div>
+        <!-- ********************************************************************* -->
+
+    		<div class="row">
+    			<div class="col col-10"></div>
+    			<div class="col col-80 centrar">
+    				<ul>
+                <li ng-click="consultarFotos(activa-1);" 
+                    class="item-paginador"
+                    ng-if="activa!=1">
+                    <span><</span>
+                </li>
+      					<li ng-repeat="i in getNumber(paginas) track by $index" 
+      					    ng-click="consultarFotos(inicio+$index);" 
+                    ng-if="$index<=2"
+                    class="item-paginador"
+                    ng-class="{'item-paginador-activo':activa== $index+inicio,'paginador-activo':activa!= $index+inicio}">
+        						<span>
+                      {{($index+1 <=fin )? inicio+$index: inicio+$index}}
+                    </span>
+      					</li>
+                <li ng-click="consultarFotos(activa+1);" 
+                    class="item-paginador"
+                    ng-if="activa!=pags">
+                    <span>></span>
+                </li>
+    				</ul>
+    			</div>
+    			<div class="col col-10"></div>
+    		</div>
+		
+<!-- ********************************************************************* -->
+		
+
+  </ion-content>
+

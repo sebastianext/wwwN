@@ -1,0 +1,63 @@
+<ion-view view-title="" class="fondo-misideas">
+	<!-- <div class="row">
+	      <div class="col col-67 letra rojo font22 titulos"  >
+	      		<p>Mis Ideas</p>
+	      </div>
+		  <div class="col col-33 " >
+		  		<img class="alineacion-vertical" src="img/ideas2.png" width="80"> 	
+		  </div>
+	</div> -->
+  <ion-content class="margin-bottom-50 margin-top-60">
+  	<!-- **************************************************************** -->
+
+  	<!-- **************************************************************** -->
+   	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80 letra centrar" >
+	  	<p class="justificado">En este espacio envía tus ideas al instante, para que en compañía de tu promotor de innovación empieces la construcción</p>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<br>
+	<!-- **************************************************************** -->
+	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80 letra azul" >
+	  	
+		  <label>Foco de innovación</label>
+		  <br>
+		  <select  multiple="true" ng-model="data.foco" class="campo-clientes">
+		    <option value="1">Modelo Cultural</option>
+		    <option value="2">Go to Market</option>
+		    <option value="3">Ejecución Impecable</option>
+		    <option value="4">Organización Centrada en el Cliente</option>
+		    <option value="5">Sostenibilidad</option>
+		  </select>
+		
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<br>
+	<!-- **************************************************************** -->
+	<div class="row">
+		<div class="col col-10" ></div>
+		<div class="col col-80 letra azul" >
+		  	
+			 <label>Ingresa tu idea</label>
+	      	 <br>
+	      	 <textarea  ng-model="data.idea" rows="4" maxlength="1000" placeholder="Máximo de carateres 1000" class="text-area-comentario"></textarea>
+			
+		</div>
+	 	<div class="col col-10" ></div>
+
+	</div>
+
+	<div class="row">
+		<div class="col col-100 centrar" ng-click="enviar()">
+			<img class="alineacion-vertical" src="img/enviar.png" width="100">
+		</div>
+	</div>
+	<!-- **************************************************************** -->
+  </ion-content>
+ <!-- <div class="bar bar-footer bar-assertive"></div> -->
+</ion-view>

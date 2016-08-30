@@ -1,0 +1,111 @@
+<ion-view view-title="" class="fondo-principal-inicio">
+  <ion-content class="margin-bottom-50" scroll="false">
+
+    <!-- <div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80" >.</div>
+ 	  <div class="col col-10" ></div>
+	</div> -->
+	
+	<div class="dos-columnas">
+	<br>
+	<br>
+	<br>	
+	<br>
+	<br>
+	<br>
+	<br>
+		<div class="row">
+				<div class="col col-50 derecha" >
+					<!--<a class="button button-icon icon" 
+					ui-sref="app.opinionCliente({parametro:'Opinion Cliente'})">
+					<img src="img/conversando.png">
+					</a>-->
+					<a class="button button-icon icon" 
+					ui-sref="app.datosCliente({parametro:'conversar con el cliente'})">
+					<img src="img/conversando.png">
+					</a>
+				</div>
+				<div class="col col-50" >
+					<a class="button button-icon icon" 
+					ui-sref="app.ejecucionImpecable({parametro:'punto de venta'})"
+					>
+					<img src="img/nuestro.png">
+				</a>
+				</div>
+		</div>
+		<div class="row">
+				<div class="col col-50 derecha" >
+					<a class="button button-icon icon"  
+					ui-sref="app.competencia({parametro:'competencia'})">
+					<img src="img/vs.png">
+				</a>
+				</div>
+			<div class="col col-50">
+				<a class="button button-icon icon"
+				href="#/app/vic">
+				<img src="img/nuestraVIC.png">
+			</a>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col col-50 derecha"  >
+					<a class="button button-icon icon" href="#/app/mensaje">
+						<div class="burbuja" ng-if="mostrar"><div>{{data.mensajes}}</div></div>
+						<img src="img/mensajesBtn.png">
+					</a>
+				</div>
+			<div class="col col-50" >
+				<a class="button button-icon icon" href="#/app/misIdeas">
+				<img src="img/mis-ideas.png">
+			</a>
+			</div>
+		</div>
+	</div>
+	<div class="tres-columnas">
+		<div class="row">
+				<div class="col col-33 centrar" >
+					<a class="button button-icon icon" 
+					ui-sref="app.datosCliente({parametro:'conversar con el cliente'})">
+				<img src="img/conversando.png">
+			</a>
+				</div>
+			<div class="col col-33 centrar" >
+			<a class="button button-icon icon" 
+			ui-sref="app.ejecucionImpecable({parametro:'punto de venta'})"
+			>
+				<img src="img/nuestro.png">
+			</a>
+			</div>
+			<div class="col col-33 centrar" >
+						<a class="button button-icon icon"  
+						ui-sref="app.competencia({parametro:'competencia'})">
+					<img src="img/vs.png">
+				</a>
+				</div>
+		</div>
+		<div class="row">
+				
+			<div class="col col-33 centrar">
+				<a class="button button-icon icon"
+				href="#/app/vic">
+				<img src="img/nuestraVIC.png">
+			</a>
+			</div>
+			<div class="col col-33 centrar"  >
+					<a class="button button-icon icon" href="#/app/mensaje">
+				<img src="img/mensajesBtnLand.png">
+			</a>
+				</div>
+			<div class="col col-33 centrar" >
+				<a class="button button-icon icon" href="#/app/misIdeas">
+				<img src="img/mis-ideasLand.png">
+			</a>
+			</div>
+		</div>		
+	</div>
+
+
+  </ion-content>
+	
+</ion-view>

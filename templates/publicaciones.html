@@ -1,0 +1,38 @@
+<ion-header-bar class="bar-stable bar bar-header" align-title="left" style="width: 10%;">
+	  <button ng-click="atras()" class="button back-button buttons button-clear header-item">
+	  <i class="icon ion-android-arrow-back"></i> 
+      <span class="back-text"></span>
+      </button>
+</ion-header-bar>
+<ion-view view-title="" class="fondo-publicaciones" style="overflow: auto;">
+
+  	<div class="row" style="padding-top:75px;">
+	      <div class="col col-67 letra rojo font22 titulos"  >
+	      		<!-- <p>Publicaciones</p> -->
+	      </div>
+		  <div class="col col-33 " >
+		  		<!-- <img class="alineacion-vertical" src="img/Ejecucion-impecable2.png" width="80"> 	 -->
+		  </div>
+	</div>
+
+	<ion-tabs class="tab-publicaciones">
+		  <ion-tab title="<div class='textoExperiencias'>Experiencias</div><div class='textoExperiencias'>y Fotos</div>" href="#/publicaciones/experiencias" class="letra blaco tabss">
+		    <ion-nav-view name="publicaciones-experiencias"></ion-nav-view>
+ 		  </ion-tab>
+
+		  <ion-tab title="Competencias" class="letra blaco tabss" href="#/publicaciones/fotos" >
+		    <ion-nav-view name="publicaciones-fotos"></ion-nav-view>
+		  </ion-tab>
+
+		  <ion-tab title="Termómetro" class="letra blaco tabss" href="#/publicaciones/termometro" >
+		    <ion-nav-view name="publicaciones-termometro"></ion-nav-view>
+		  </ion-tab>
+	</ion-tabs>
+  <ion-nav-view>
+  	
+
+	
+	  	 
+  </ion-nav-view>
+ <!-- <div class="bar bar-footer bar-assertive"></div> -->
+</ion-view>

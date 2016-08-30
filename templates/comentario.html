@@ -1,0 +1,66 @@
+<ion-view view-title=""  ng-class="{'fondo-comversando':(tipo=='1'),'fondo-comentario-competencia':(tipo=='2'),'fondo-puntos-venta':(tipo=='3')}"
+>
+	
+  <ion-content class="margin-bottom-50 margin-top-60" >
+   	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80 letra texto-opinion justificado" >
+	  	<p ng-if="tipo!='1'">Selecciona cómo quieres ingresar el comentario</p>
+	  	<p ng-if="tipo=='1'">Conversa con nuestro cliente para saber lo que realmente piensa y siente sobre nosotros y selecciona cómo quieres ingresar el comentario</p>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+
+
+	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar">
+	  	<div>
+	  		<a class="button button-icon icon" 
+	  		ui-sref="app.comentarioTexto({parametro:'texto'})"
+	  		>
+			  	<img class="alineacion-vertical" src="img/textoBtn.png" width="150">
+		  	</a> 
+	  	</div>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<br>
+
+	<div class="row">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar" >
+		<div>
+			<a class="button button-icon icon" 
+			ui-sref="app.comentarioAudio({parametro:'audio'})">
+			  	<img class="alineacion-vertical" src="img/audioGrandeBtn.png" width="150">
+		 	</a> 
+	 	</div>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	<br>
+	
+	<div class="row" ng-if="tipo!='1'">
+      <div class="col col-10" ></div>
+	  <div class="col col-80  centrar" >
+		<div>
+			<a class="button button-icon icon" 
+			ui-sref="app.comentarioFoto({parametro:'imagen'})">
+			  	<img class="alineacion-vertical" src="img/fotoBtn.png" width="150">
+		 	</a> 
+	 	</div>
+	  </div>
+ 	  <div class="col col-10" ></div>
+	</div>
+	
+	<!-- <br>
+	<div class="row">
+		<div class="col col-100 centrar" >
+			<a ng-click="$ionicGoBack()"  >
+				<img class="alineacion-vertical" src="img/atras.png" width="100">
+			</a>
+		</div>
+	</div> -->
+  </ion-content>
+</ion-view>

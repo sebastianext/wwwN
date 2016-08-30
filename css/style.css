@@ -1,0 +1,237 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+   font-family: 'segoe';
+   src: url('../css/seguili.ttf');
+}
+
+.derecha{
+	text-align: right;
+}
+.alineacion-vertical{
+	display: inline-block;
+	vertical-align: top
+}
+.azul{
+	color: rgb(0,82,174);
+}
+
+.text-descripcion{
+	color: #ccc;
+}
+
+.btn-iniciar{
+	background:#fc2e2e !important;
+	border-radius: 15px;
+}
+.bar.bar-stable {
+    background: none;
+    border: none;
+}
+.campo-clientes{
+	background: transparent;
+	border: 1px solid #0053aa !important;
+	/*width: 65%;*/
+
+}
+.check div label{
+    background-color: transparent;
+    border: none;
+    padding: 0px 0px 0px 50px;
+}
+
+.centrar{
+	text-align: center;
+}
+.content-menu{
+	
+	/*position: static;*/
+	background: rgb(3,93,170);
+	margin-top: 55px;
+
+}
+.content-menu .scroll{
+	background: rgb(3,93,170);
+}
+
+.contenedor-login{
+	margin: 0px 50px;
+	background-color: rgba(255,255,255, 0);
+
+}
+.contrasena{
+	background-image: url("../img/contrasena.png");
+	background-repeat: no-repeat;
+    height: 70px;
+    width: 50px;
+}
+.justificado{
+	text-align: justify;
+}
+.fondo-principal{
+	background: url("../img/back-menu.png") center;
+	background-size: cover;
+}
+.font22{
+	font-size: 22px;
+}
+.form{
+  display: table-cell;
+  vertical-align: middle;
+}
+.header-bar{
+
+	background:rgb(4,67,114) !important;
+	border: none;
+	font-size: 22px;
+    height: 100px;
+
+}
+.header-bar h1{
+	color:white !important;
+	font-size: 40px !important;
+    margin-top: 25px !important;
+  	text-align: center !important;
+}
+.inline-block{
+	display: inline-block !important;
+}
+.letra{
+	font-family: segoe;
+	font-weight: bold;
+
+}
+.list-inset input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: white;
+}
+.list-inset label input{
+	color: white;
+	font-size: 18px;
+	text-align: center;
+}
+.linea-campos{
+	border-bottom: 1px solid white !important;
+    padding-left: 0px;
+}
+
+.login-fondo{
+	background: blue;
+}
+.login-fondo-label{
+	background-color: rgba(255,255,255, 0);
+}
+.login-fondo .scroll {
+  display: table !important;
+  height: 100% !important;
+  margin-top: 50px; /* the height of the centered content */
+  text-align: center;
+  width: 100% !important;
+}
+.menu-item,.menu-item a{
+	background: none !important;
+	border: none;
+    color: white !important;
+}
+.menu-item a img,.menu-item a div{
+	vertical-align: top;
+    display: inline-block;
+}
+.menu-item a div{
+	margin-top: 15px;
+}
+.menu-item a {
+	padding-bottom: 0px !important;
+}
+.no-padding-bottom{
+	padding-bottom: 0 !important;
+}
+.no-padding-top{
+	padding-top: 0 !important;
+}
+
+
+.popupCamara div.popup{
+	background: white;
+}
+.popupCamara div.popup div{
+	border: none;
+}
+.popupCamara div.popup div.popup-buttons {
+	flex: 0;
+	margin: 0 auto;
+	width: 120px !important;
+}
+.popupCamara div.popup div.popup-buttons button.activated,
+.popupCamara div.popup div.popup-buttons button{
+	border: none;
+	background: transparent;
+	padding: 0;
+}
+
+.preguntas-frecuentes{
+	background-image: url("../img/preguntas-frecuentes.png");
+	height: 50px;
+    width: 50px;
+    background-size: 50px;
+    position: fixed;
+}
+
+.conversando-clientes{
+	background-image: url("../img/preguntas-frecuentes.png");
+	height: 50px;
+    width: 50px;
+    background-size: 50px;
+    position: fixed;
+}
+
+.publicaciones-tabs-items{
+	background: transparent;
+}
+.radioPositivo div div,.radioPositivo{
+	background: transparent !important;
+	border: none !important;
+}
+.rojo{
+	color: red;
+}
+.side-menu{
+	font-family: segoe;
+    font-style: oblique;
+}
+.sin-borde{
+	border: none;
+}
+.tab-publicaciones > div{
+	position: relative;
+	top: 0px !important;
+}
+.tabss {
+	background-color: rgb(0,80,170)  !important;
+}
+.text-area-comentario{
+	background: transparent;
+	border: 1px solid #0053aa;
+	padding: 5px;
+	width: 100%;
+}
+.texto-opinion{
+	text-align: center;
+}
+.titulos{
+	padding: 32px 0 0 30px;
+}
+.titulo-opinio{
+	margin-top: 35px;
+	font-size: 28px;
+}
+
+.usuario{
+	background-image: url("../img/user.png");
+	background-repeat: no-repeat;
+	height: 70px;
+    width: 50px;
+}
+.blaco{
+	color: white;
+	
+}
+

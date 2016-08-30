@@ -1,0 +1,88 @@
+<ion-view view-title="" class="fondo-relacionamiento">
+
+  <ion-content class="margin-top-60">
+
+   	<div class="row ">
+   		<div class="col col-100 centrar" >
+   			<h5 class="verde">{{data.nombrePVD +'-'+ data.codigo}}</h5>
+   		</div>
+	</div>
+	<!-- ********************************************************* -->
+
+	<br>
+	<div class="row"  >
+		<div class="col col-50 " >
+     		<label class="letra verde ">Socios Nutresa:</label>
+     	</div>
+     	<div class="col col-50" >
+	     	<label class="letra "> {{data.socios >0 ? 'SI': 'NO'}}</label>
+	     	<a href="#/app/vicRelacionamiento-redenciones"  class="recuadroPlus"><label class="letra">Redenciones</label></a>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-50 " >
+     		<label class="letra verde ">Plan de Negocios:</label>
+     	</div>
+     	<div class="col col-50" >
+	     	<label class="letra "> {{data.plan ? data.plan : 'N/A'}}</label>
+		</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-50 " >
+	     	<label class="letra verde ">Balance Relac.Ccial:</label>
+     	</div>
+     	<div class="col col-67" >
+	     	<label class="letra "> {{data.balance ? data.balance : 'N/A'}}</label>
+
+		</div>
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row"  >
+		<div class="col col-50 " >
+     		<label class="letra verde ">Escuela - Año:</label>
+     	</div>
+     	<div class="col col-67" >
+     		<label class="letra "> {{data.escuela ? data.escuela : 'N/A'}}</label>
+     	</div>
+	</div>
+	<!-- ********************************************************* -->
+	<div class="row " >
+		<div class="col col-50 no-padding-bottom " >
+	     	<label class="letra verde ">Año certificación:</label>
+     	</div>
+     	<div class="col col-50" >
+     		<label class="letra ">{{data.certificacion ? data.certificacion : 'N/A'}}</label>
+     	</div>
+
+	</div>
+	
+	<!-- ********************************************************* -->
+	<div class="row" >
+		<div class="col col-50" >
+     		<label class="letra verde ">Modelo Colab.% Ejec:</label>
+     	</div>
+     	<div class="col col-50" >
+     		<label class="letra ">{{data.modelo ? data.modelo : 'N/A'}}</label>
+     	</div>
+	</div>
+	
+
+
+		
+  </ion-content>
+  <!-- <div class="bar bar-footer no-padding" style="height:80px;">
+	 	<div class="row no-padding">
+			
+			<div class="col col-25 centrar no-padding" >
+				<a href="#/app/vicDetalles" >
+					<img class="alineacion-vertical" src="img/relacionamiento2.png">
+				</a>
+			</div>
+			
+		</div>
+	  
+	</div> -->
+</ion-view>

@@ -1,0 +1,61 @@
+<ion-view view-title="" class="fondo-mensajes">
+	
+  <ion-content class="margin-bottom-50 margin-top-60">
+
+  	<div class="marcoImagix">
+	  	<ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)" >
+		  <ion-slide ng-repeat="obj in datos">
+		    <div class="box blue">
+		    	<h4>Gestión Imagix</h4>
+		    	<br>
+		    	<input type="hidden" name="" ng-model="data.idmodel" class="idmodel" value="{{obj.imagix.id_imagix}}">
+		 		<strong>Idea Imagix:</strong>
+		 		<span>{{obj.imagix.idea}}</span>
+		 		<br>
+		 		<strong>Fecha de Envío:</strong>
+		 		<span>{{obj.imagix.fechaPublicacion}}</span>
+		 		<br>
+		 		<strong>Focos de Innovación:</strong>
+		 		<span>{{obj.imagix.idea}}</span>
+
+		 		<br>
+		 		<br>
+		 		<br>
+
+		 		<strong>Gestión:</strong>
+		 		<br>
+		 		<span>{{obj.imagix.respuesta ? obj.imagix.respuesta : 'Aún no hay gestión'}} </span>
+		 		<br>
+		 		<strong>Fecha Gestión:</strong>
+		 		<br>
+		 		<span> {{obj.imagix.fecha ? obj.imagix.fecha : 'Aún no hay gestión'}}</span>
+		 		<br>
+		    </div>
+		  </ion-slide>
+
+		 </ion-slide-box>
+
+	 </div>
+	 <div class="row ">
+	    <div class="col col-10" ></div>
+	    <div class="col col-80  centrar " >
+	    	<a ng-click="previousSlide()">← Anterior</a> | <a ng-click="nextSlide()">Siguiente →</a>
+	    </div>
+	    <div class="col col-10" ></div>
+	  </div>
+	  <br>
+	 <div class="row">
+		<!-- <div class="col col-50 derecha" >
+			<a ng-click="$ionicGoBack()" >
+				<img class="alineacion-vertical" src="img/atras.png" width="100">
+			</a>
+		</div> -->
+		<div class="col col-100 centrar" >
+			<a ng-click="eliminarGestion()" >
+				<img class="alineacion-vertical" src="img/eliminar.png" width="100">
+			</a>
+		</div>
+	</div>
+
+  </ion-content>
+</ion-view>
